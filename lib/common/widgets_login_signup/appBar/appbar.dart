@@ -20,7 +20,7 @@ class TAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? leadingOnPressed;
   @override
   Widget build(BuildContext context) {
-    debugPrint('🔵 TAppBar added to screen');
+    // debugPrint('🔵 TAppBar added to screen');
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: TSizes.md - 5),
       child: AppBar(
