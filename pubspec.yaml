@@ -24,6 +24,8 @@ dependencies:
   url_launcher: ^6.0.9
   flutter_native_splash: ^2.4.4
   smooth_page_indicator: ^1.2.0+3
+  carousel_slider: ^5.0.0
+
 
   #STATE MANAGEMENT
   get: ^4.3.8
@@ -48,6 +50,8 @@ flutter:
     - assets/logos/
     - assets/images/
     - assets/images/animation/
+    - assets/images/banners/
+    - assets/icons/categories/
 
 
 

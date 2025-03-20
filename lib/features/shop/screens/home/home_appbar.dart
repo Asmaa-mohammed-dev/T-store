@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:t_store/common/widgets_login_signup/appBar/appbar.dart';
 import 'package:t_store/common/widgets_login_signup/products.cart/cart_menu_icon.dart';
@@ -21,7 +20,7 @@ class THomeAppBar extends StatelessWidget {
             style: Theme.of(context)
                 .textTheme
                 .labelMedium!
-                .apply(color: TColors.grey),
+                .apply(color: const Color.fromARGB(255, 243, 243, 243)),
           ),
           Text(
             TTexts.homeAppbarSubTitle,
