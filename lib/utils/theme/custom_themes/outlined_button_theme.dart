@@ -7,10 +7,10 @@ class TOutlinedButtonTheme {
   static final lightOutlinedButtonTheme = OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
       elevation: 0,
-      foregroundColor: Colors.black,
+      foregroundColor: Colors.blue,
       side: const BorderSide(color: Colors.blue),
       textStyle: const TextStyle(
-          fontSize: 16, color: Colors.black, fontWeight: FontWeight.w600),
+          fontSize: 16, color: Colors.blue, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(14),
       ),

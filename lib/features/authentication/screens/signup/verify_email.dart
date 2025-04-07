@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:t_store/common/widgets_login_signup/success_screen/success_screen.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
@@ -54,6 +55,9 @@ class VerifyEmailScreen extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: TColors.primary, // لون الزر أزرق
+                  ),
                   onPressed: () => Get.offAll(() => SuccessScreen(
                         image: TImages.staticSuccessIllustration,
                         title: TTexts.yourAccountCreatedTitle,
@@ -68,6 +72,9 @@ class VerifyEmailScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: TColors.primary, // لون الزر أزرق
+                  ),
                   child: const Text(TTexts.resendEmail),
                 ),
               ),

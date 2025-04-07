@@ -24,12 +24,17 @@ dependencies:
   url_launcher: ^6.0.9
   flutter_native_splash: ^2.4.4
   smooth_page_indicator: ^1.2.0+3
-  carousel_slider: ^5.0.0
 
 
   #STATE MANAGEMENT
   get: ^4.3.8
   get_storage: ^2.0.3
+
+  #Product Specific
+  readmore: ^3.0.0
+  carousel_slider: ^5.0.0
+  flutter_rating_bar: ^4.0.1
+
 
 dev_dependencies:
   flutter_test:
@@ -51,6 +56,12 @@ flutter:
     - assets/images/
     - assets/images/animation/
     - assets/images/banners/
+    - assets/images/products/
+    - assets/images/ratings/
+
+    - assets/images/user/
+
+
     - assets/icons/categories/
 
 

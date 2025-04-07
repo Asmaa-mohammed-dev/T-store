@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:t_store/common/styles/spacing_style.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
@@ -44,6 +45,9 @@ class SuccessScreen extends StatelessWidget {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: onPressed,
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: TColors.primary, // لون الزر أزرق
+                  ),
                   child: const Text(TTexts.tContinue),
                 ),
               ),
