@@ -1,10 +1,8 @@
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/circular_container.dart';
+import 'package:t_store/common/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/primary_header_container.dart';
 import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/search_container.dart';
-import 'package:t_store/common/widgets_login_signup/images/t_rounded_image.dart';
+import 'package:t_store/common/widgets_login_signup/products/products_cards/product_card_vertical.dart';
 import 'package:t_store/common/widgets_login_signup/texts/section_heading.dart';
 import 'package:t_store/features/shop/screens/home/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
@@ -50,18 +48,37 @@ class HomeScreen extends StatelessWidget {
                         THomeCategories(),
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: TSizes.spaceBtwSections,
+                  ),
                 ],
               ),
             ),
             //Body
             Padding(
               padding: const EdgeInsets.all(TSizes.defaultSpace),
-              child: TPromoSlider(
-                banners: [
-                  TImages.promBanner1,
-                  TImages.promBanner2,
-                  TImages.promBanner3
+              child: Column(
+                children: [
+                  TPromoSlider(
+                    banners: [
+                      TImages.promBanner1,
+                      TImages.promBanner2,
+                      TImages.promBanner3
+                    ],
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwSections),
+                  //Heading
+                  TSectionHeading(
+                    title: 'Popular Products',
+                    onPressed: () {},
+                  ),
+                  const SizedBox(height: TSizes.spaceBtwItems),
+                  //Popular products
+                  TGridLayout(
+                      itemCount: 6,
+                      itemBuilder: (_, index) => const TProductCardVertical()),
+                  //Popular products
                 ],
               ),
             ),

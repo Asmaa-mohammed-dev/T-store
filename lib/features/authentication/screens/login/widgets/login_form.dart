@@ -4,6 +4,7 @@ import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screens/signup/signup.dart';
 import 'package:t_store/features/password_configuration/forget_password.dart';
 import 'package:t_store/navigation_menu.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -40,14 +41,22 @@ class TLoginForm extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Checkbox(value: true, onChanged: (value) {}),
+                    Checkbox(
+                      value: true,
+                      onChanged: (value) {},
+                      activeColor: TColors.primary,
+                    ),
                     const Text(TTexts.rememberMe),
                   ],
                 ),
                 const Spacer(),
                 TextButton(
                   onPressed: () => Get.to(() => ForgetPassword()),
-                  child: Text(TTexts.forgetPassword),
+                  child: Text(
+                    TTexts.forgetPassword,
+                    selectionColor: TColors.primary,
+                    style: TextStyle(color: TColors.primary),
+                  ),
                 ),
               ],
             ),
@@ -58,6 +67,9 @@ class TLoginForm extends StatelessWidget {
               child: ElevatedButton(
                 // onPressed: () => Get.to(() => NavigationMenu()),
                 onPressed: () => Get.offAll(() => NavigationMenu()),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: TColors.primary, // لون الزر أزرق
+                ),
                 child: Text(TTexts.signIn),
               ),
             ),
@@ -72,6 +84,7 @@ class TLoginForm extends StatelessWidget {
                     borderRadius:
                         BorderRadius.circular(10), // التحكم في الانحناء
                   ),
+                  foregroundColor: TColors.primary,
                 ),
                 onPressed: () => Get.to(() => SignUpScreen()),
                 child: Text(TTexts.createAccount),

@@ -30,4 +30,21 @@ class TImages {
   static const String promBanner2 = 'assets/images/banners/35.jpg';
   static const String promBanner3 = 'assets/images/banners/36.jpg';
   static const String promBanner4 = 'assets/images/banners/37.jpg';
+  // --product Images
+  static const String productImage1 = 'assets/images/products/product1.jpg';
+  static const String productImage2 = 'assets/images/products/product2.png';
+  static const String productImage3 = 'assets/images/products/product3.jpg';
+  static const String productImage4 = 'assets/images/products/product4.jpg';
+  static const String productImage5 = 'assets/images/products/product5.jpg';
+  static const String productImage6 = 'assets/images/products/product6.png';
+  static const String productImage7 = 'assets/images/products/product7.png';
+  static const String productImage8 = 'assets/images/products/product8.png';
+  static const String productImage9 = 'assets/images/products/product9.png';
+  static const String clothIcon = 'assets/images/products/cloth.png';
+  // --product Images
+  static const String user = 'assets/images/user/user.png';
+  static const String muslim = 'assets/images/user/muslim.png';
+  // --Product Reviews
+  static const String userProfileImage1 = 'assets/images/ratings/man.png';
+  static const String userProfileImage2 = 'assets/images/ratings/woman.png';
 }

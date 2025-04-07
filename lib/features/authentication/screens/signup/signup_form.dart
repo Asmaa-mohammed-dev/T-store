@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:t_store/features/authentication/screens/signup/terms_conditions_checkbox.dart';
 import 'package:t_store/features/authentication/screens/signup/verify_email.dart';
+import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/constants/text_strings.dart';
 
@@ -87,6 +88,9 @@ class TSignUpForm extends StatelessWidget {
             width: double.infinity,
             child: ElevatedButton(
               onPressed: () => Get.to(() => const VerifyEmailScreen()),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: TColors.primary, // لون الزر أزرق
+              ),
               child: Text(TTexts.createAccount),
             ),
           ),

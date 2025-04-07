@@ -32,7 +32,7 @@ class TTermsAndConditionCheckbox extends StatelessWidget {
                   text: '${TTexts.and} ',
                   style: Theme.of(context).textTheme.bodySmall),
               TextSpan(
-                text: '${TTexts.termsOfUse}',
+                text: TTexts.termsOfUse,
                 style: Theme.of(context).textTheme.bodyMedium!.apply(
                     color: dark ? TColors.textWhite : TColors.primary,
                     decoration: TextDecoration.underline,
