@@ -10,14 +10,13 @@ import 'package:t_store/features/shop/screens/product_details/widgets/product_de
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store/features/shop/screens/produtc_reviews/widgets/products.reviews.dart';
 import 'package:t_store/utils/constants/sizes.dart';
-import 'package:t_store/utils/helpers/helper_functions.dart';
 
 class ProductDetailScreen extends StatelessWidget {
   const ProductDetailScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = THelperFunctions.isDarkMode(context);
+    // final dark = THelperFunctions.isDarkMode(context);
     return Scaffold(
       bottomNavigationBar: TBottomAddToCart(),
       body: SingleChildScrollView(

@@ -77,10 +77,10 @@ class AddNewAdressScreen extends StatelessWidget {
                   width: double.infinity,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text('Save'),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: TColors.primary, // لون الزر أزرق
                     ),
+                    child: Text('Save'),
                   ),
                 ),
               ],

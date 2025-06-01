@@ -32,7 +32,7 @@ class TBrandTitleWithVertification extends StatelessWidget {
         Flexible(
             child: TBrandTitleText(
           title: title,
-          color: textColor ?? (dark ? TColors.grey : Colors.grey),
+          color: textColor ?? (dark ? TColors.grey : TColors.darkerGrey),
           maxLines: maxLines,
           textAlign: textAlign,
           brandTextSize: brandTextSize,
