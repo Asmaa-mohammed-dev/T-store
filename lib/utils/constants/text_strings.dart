@@ -13,8 +13,8 @@ class TTexts {
       "From Our Doorstep to Yours - Swift, Secure, and Contactless Delivery";
 
 //Authentication Form Text
-  static const String firstName = "first name";
-  static const String lastName = "last name";
+  static const String firstName = "First name";
+  static const String lastName = "Last name";
   static const String email = "E-mail";
   static const String password = "password";
   static const String newPassword = "New Password";

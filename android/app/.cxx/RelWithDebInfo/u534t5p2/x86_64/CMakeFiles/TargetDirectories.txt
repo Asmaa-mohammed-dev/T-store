@@ -1,0 +1,2 @@
+D:/developement/flutter-apps/t_store/android/app/.cxx/RelWithDebInfo/u534t5p2/x86_64/CMakeFiles/edit_cache.dir
+D:/developement/flutter-apps/t_store/android/app/.cxx/RelWithDebInfo/u534t5p2/x86_64/CMakeFiles/rebuild_cache.dir

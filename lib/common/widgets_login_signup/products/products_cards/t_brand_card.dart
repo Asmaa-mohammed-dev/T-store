@@ -24,7 +24,7 @@ class TBrandCard extends StatelessWidget {
     final isDark = THelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: TRoundedContainer(
         padding: const EdgeInsets.all(TSizes.sm),
         showBorder: showBorder,
@@ -54,7 +54,9 @@ class TBrandCard extends StatelessWidget {
                   Text('256 products',
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
-                          color: isDark ? TColors.white : TColors.black)),
+                          color: isDark
+                              ? TColors.white
+                              : const Color.fromARGB(255, 117, 117, 117))),
                 ],
               ),
             ),

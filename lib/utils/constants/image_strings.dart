@@ -47,4 +47,12 @@ class TImages {
   // --Product Reviews
   static const String userProfileImage1 = 'assets/images/ratings/man.png';
   static const String userProfileImage2 = 'assets/images/ratings/woman.png';
+  // --Payment Method
+  static const String paypal = 'assets/icons/payment_methods/paypal.png';
+  // -- Lottie
+  static const String animation = 'assets/images/animation/loading.json';
+
+  static const String successfullyRegisterAnimation =
+      'assets/images/animation/register.json';
+  static const String docerAnimation = 'assets/images/animation/docer.json';
 }

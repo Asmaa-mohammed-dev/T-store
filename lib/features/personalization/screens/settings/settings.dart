@@ -6,8 +6,10 @@ import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/pri
 import 'package:t_store/common/widgets_login_signup/list_tile/settings_menu_tile.dart';
 import 'package:t_store/common/widgets_login_signup/list_tile/user_profile_tile.dart';
 import 'package:t_store/common/widgets_login_signup/texts/section_heading.dart';
+import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/features/personalization/screens/address/widgets/address.dart';
 import 'package:t_store/features/personalization/screens/profile/profile.dart';
+import 'package:t_store/features/shop/screens/orders/widgets/order.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
@@ -68,7 +70,7 @@ class SettingsScreen extends StatelessWidget {
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subTitle: 'In-progress and Completed Orders',
-                    onTap: () {},
+                    onTap: () => Get.to(() => const OrderScreen()),
                   ),
                   TSettingsMenuTile(
                     icon: Iconsax.bank,
@@ -137,7 +139,7 @@ class SettingsScreen extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     child: OutlinedButton(
-                      onPressed: () {},
+                      onPressed: () => Get.off(() => LoginScreen()),
                       child: Text('Log Out',
                           style: Theme.of(context).textTheme.titleLarge),
                     ),
