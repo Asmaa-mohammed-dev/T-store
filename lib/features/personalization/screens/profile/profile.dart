@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:t_store/common/shimmer/shimmer.dart';
 import 'package:t_store/common/widgets_login_signup/appBar/appbar.dart';
 import 'package:t_store/common/widgets_login_signup/images/t_circular_inage.dart';
 import 'package:t_store/common/widgets_login_signup/texts/section_heading.dart';
@@ -32,10 +33,26 @@ class ProfileScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     // Profile Screen
-                    TCircularImage(
-                        image: TImages.muslim, width: 80, height: 80),
+                    Obx(() {
+                      final networkImage = controller.user.value.profilePicture;
+                      final image =
+                          networkImage.isNotEmpty ? networkImage : TImages.user;
+                      return controller.imageUploading.value
+                          ? const TShimmerEffect(
+                              width: 80,
+                              height: 80,
+                              radius: 80,
+                            )
+                          : TCircularImage(
+                              image: image,
+                              width: 80,
+                              height: 80,
+                              isNetworkImage: networkImage.isNotEmpty,
+                            );
+                    }),
+
                     TextButton(
-                        onPressed: () {},
+                        onPressed: () => controller.uploadUserProfilePicture(),
                         child: Text('Change Profile Picture')),
                   ],
                 ),
