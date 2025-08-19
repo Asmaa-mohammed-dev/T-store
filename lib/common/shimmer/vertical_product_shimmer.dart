@@ -3,8 +3,8 @@ import 'package:t_store/common/layouts/grid_layout.dart';
 import 'package:t_store/common/shimmer/shimmer.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
-class NVerticalProductShimmer extends StatelessWidget {
-  const NVerticalProductShimmer({super.key, this.itemCount = 4});
+class TVerticalProductShimmer extends StatelessWidget {
+  const TVerticalProductShimmer({super.key, this.itemCount = 4});
 
   final int itemCount;
   @override

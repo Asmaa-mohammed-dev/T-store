@@ -7,6 +7,7 @@ import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/sea
 import 'package:t_store/common/widgets_login_signup/products.cart/cart_menu_icon.dart';
 import 'package:t_store/common/widgets_login_signup/products/products_cards/t_brand_card.dart';
 import 'package:t_store/common/widgets_login_signup/texts/section_heading.dart';
+import 'package:t_store/features/shop/controllers/category_controller.dart';
 import 'package:t_store/features/shop/screens/brands/all_brands.dart';
 import 'package:t_store/features/shop/screens/home/widgets/categorytab.dart';
 import 'package:t_store/utils/constants/colors.dart';
@@ -19,8 +20,9 @@ class StoreScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final categories = CategoryController.instance.featuredCategories;
     return DefaultTabController(
-      length: 5,
+      length: categories.length,
       child: Scaffold(
         appBar: TAppBar(
           title: Text(
@@ -74,26 +76,26 @@ class StoreScreen extends StatelessWidget {
                   ),
                 ),
                 // Tabs
-                bottom: const TTabBar(tabs: [
-                  Tab(child: Text('Stabraq')),
-                  Tab(child: Text('Joudfood')),
-                  Tab(child: Text('Desert')),
-                  Tab(child: Text('nastonas')),
-                  Tab(child: Text('mersal')),
-                ]),
+                bottom: TTabBar(
+                  tabs: categories
+                      .map((category) => Tab(child: Text(category.name)))
+                      .toList(),
+                  //   tabs: [
+                  //   Tab(child: Text('Stabraq')),
+                  //   Tab(child: Text('Joudfood')),
+                  //   Tab(child: Text('Desert')),
+                  //   Tab(child: Text('nastonas')),
+                  //   Tab(child: Text('mersal')),
+                  // ]
+                ),
               ),
             ];
           },
           // body
-
           body: TabBarView(
-            children: [
-              TCategoryTab(),
-              TCategoryTab(),
-              TCategoryTab(),
-              TCategoryTab(),
-              TCategoryTab(),
-            ],
+            children: categories
+                .map((category) => TCategoryTab(category: category))
+                .toList(),
           ),
         ),
       ),

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:t_store/data/repositories.authentication/t_firebase_auth_exception.dart';
+import 'package:t_store/data/repositories.authentication/authentication/t_firebase_auth_exception.dart';
 import 'package:t_store/data/user/user_repository.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/features/authentication/screens/onboarding/onboarding.dart';

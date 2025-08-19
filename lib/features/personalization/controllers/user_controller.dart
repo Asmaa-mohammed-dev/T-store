@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:t_store/common/loaders/network_manager.dart';
-import 'package:t_store/data/repositories.authentication/authentication_repository.dart';
+import 'package:t_store/data/repositories.authentication/authentication/authentication_repository.dart';
 import 'package:t_store/data/user/user_model.dart';
 import 'package:t_store/data/user/user_repository.dart';
 import 'package:t_store/features/authentication/screens/login/login.dart';

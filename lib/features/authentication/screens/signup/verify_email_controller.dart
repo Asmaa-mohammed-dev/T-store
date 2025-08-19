@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories.authentication/authentication_repository.dart';
+import 'package:t_store/data/repositories.authentication/authentication/authentication_repository.dart';
 import 'package:t_store/features/authentication/screens/login/widgets/success_screen/success_screen.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/text_strings.dart';

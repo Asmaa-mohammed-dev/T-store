@@ -3,11 +3,15 @@ import 'package:t_store/common/layouts/grid_layout.dart';
 import 'package:t_store/common/widgets_login_signup/brands/brand_show_case.dart';
 import 'package:t_store/common/widgets_login_signup/products/products_cards/product_card_vertical.dart';
 import 'package:t_store/common/widgets_login_signup/texts/section_heading.dart';
+import 'package:t_store/features/shop/models/category_model.dart';
+import 'package:t_store/features/shop/models/product_model.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
 class TCategoryTab extends StatelessWidget {
-  const TCategoryTab({super.key});
+  const TCategoryTab({super.key, required this.category});
+
+  final CategoryModel category;
 
   @override
   Widget build(BuildContext context) {
@@ -45,7 +49,8 @@ class TCategoryTab extends StatelessWidget {
               const SizedBox(height: TSizes.spaceBtwItems),
               TGridLayout(
                   itemCount: 4,
-                  itemBuilder: (_, index) => const TProductCardVertical()),
+                  itemBuilder: (_, index) =>
+                      TProductCardVertical(product: ProductModel.empty())),
             ],
           ),
         ),

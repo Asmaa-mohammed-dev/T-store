@@ -6,8 +6,8 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:t_store/data/repositories.authentication/authentication_repository.dart';
-import 'package:t_store/data/repositories.authentication/t_firebase_auth_exception.dart';
+import 'package:t_store/data/repositories.authentication/authentication/authentication_repository.dart';
+import 'package:t_store/data/repositories.authentication/authentication/t_firebase_auth_exception.dart';
 import 'package:t_store/data/user/user_model.dart';
 
 class UserRepository extends GetxController {

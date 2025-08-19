@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:t_store/data/repositories.authentication/authentication_repository.dart';
-import 'package:t_store/features/authentication/screens/login/login.dart';
+import 'package:t_store/data/repositories.authentication/authentication/authentication_repository.dart';
 import 'package:t_store/features/authentication/screens/signup/verify_email_controller.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';

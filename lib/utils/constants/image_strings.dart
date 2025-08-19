@@ -44,6 +44,16 @@ class TImages {
   // --product Images
   static const String user = 'assets/images/user/user.png';
   static const String muslim = 'assets/images/user/muslim.png';
+  // -- Categories Icons
+
+  static const String shoeIcon = 'assets/icons/categories/running-shoe.png';
+  static const String shoeIcontwo = 'assets/icons/categories/running-shoe2.png';
+  static const String honeyIcon = 'assets/icons/categories/honey.png';
+  static const String shirtIcon = 'assets/icons/categories/honey2.png';
+  static const String vegIcon = 'assets/icons/categories/healthy-food.png';
+  static const String vegIcontwo = 'assets/icons/categories/healthy-food2.png';
+  static const String fruitIcon = 'assets/icons/categories/fruit.png';
+  static const String fruitIcontwo = 'assets/icons/categories/fruit2.png';
   // --Product Reviews
   static const String userProfileImage1 = 'assets/images/ratings/man.png';
   static const String userProfileImage2 = 'assets/images/ratings/woman.png';

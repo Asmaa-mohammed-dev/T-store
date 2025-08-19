@@ -1,5 +1,7 @@
 ///List of enums
 ///They connect be created inside a class
+enum ProductType { single, variable }
+
 enum TextSizes { small, medium, large }
 
 enum OrderStatus { processing, shipped, de3livered }
