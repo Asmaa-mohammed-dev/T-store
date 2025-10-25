@@ -10,6 +10,7 @@ import 'package:t_store/features/shop/screens/product_details/widgets/product_at
 import 'package:t_store/features/shop/screens/product_details/widgets/product_detail_image_slider.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:t_store/features/shop/screens/produtc_reviews/widgets/products.reviews.dart';
+import 'package:t_store/utils/constants/enums.colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 
 class ProductDetailScreen extends StatelessWidget {
@@ -24,9 +25,8 @@ class ProductDetailScreen extends StatelessWidget {
         child: Column(
           //  1 - Product Image Slider
           children: [
-            TProductImageSlider(),
+            TProductImageSlider(product: product),
             //  2 - Product details
-
             Padding(
               padding: EdgeInsets.only(
                   right: TSizes.defaultSpace,
@@ -35,14 +35,16 @@ class ProductDetailScreen extends StatelessWidget {
               child: Column(
                 children: [
                   //  Rating & Share
-                  TRatingAndShare(),
+                  const TRatingAndShare(),
 
                   //  Price & title
-                  TProductMetaData(),
+                  TProductMetaData(product: product),
                   //  Attributes
-                  ProductAttribute(),
+                  if (product.productType == ProductType.variable.toString())
+                    ProductAttribute(product: product),
                   //  Checkout Button
-                  SizedBox(height: TSizes.spaceBtwSections),
+                  if (product.productType == ProductType.variable.toString())
+                    SizedBox(height: TSizes.spaceBtwSections),
 
                   SizedBox(
                     width: double.infinity,
@@ -60,7 +62,7 @@ class ProductDetailScreen extends StatelessWidget {
                   ),
                   SizedBox(height: TSizes.spaceBtwItems),
                   ReadMoreText(
-                    'This is a Product description for Blue Snikker .There are more things that can be added but i prefer to do it as i believe you deserve it ',
+                    product.description ?? '',
                     trimLines: 2,
                     trimMode: TrimMode.Line,
                     trimCollapsedText: 'Show More',

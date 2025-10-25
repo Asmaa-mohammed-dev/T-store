@@ -6,7 +6,7 @@ import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/pri
 import 'package:t_store/common/widgets_login_signup/custom_shapes/containers/search_container.dart';
 import 'package:t_store/common/widgets_login_signup/products/products_cards/product_card_vertical.dart';
 import 'package:t_store/common/widgets_login_signup/texts/section_heading.dart';
-import 'package:t_store/features/shop/controllers/product_controller.dart';
+import 'package:t_store/features/shop/controllers/products/product_controller.dart';
 import 'package:t_store/features/shop/screens/all_products/all_products.dart';
 import 'package:t_store/features/shop/screens/home/home_appbar.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home_categories.dart';
@@ -69,7 +69,8 @@ class HomeScreen extends StatelessWidget {
                   //Heading
                   TSectionHeading(
                     title: 'Popular Products',
-                    onPressed: () => Get.to(() => const AllProducts()),
+                    onPressed: () => Get.to(() => AllProducts(title: 'Popular Products',
+                    futureMethod: controller.fetchAllFeaturedProducts(),)),
                   ),
                   const SizedBox(height: TSizes.spaceBtwItems),
                   //Popular products

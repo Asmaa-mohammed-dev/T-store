@@ -111,8 +111,8 @@ class ProductModel {
               .map((e) => ProductAttributeModel.fromJson(e))
               .toList()
           : [],
-      productVariations: data['ProductVaritions'] != null
-          ? (data['ProductVaritions'] as List)
+      productVariations: data['ProductVariations'] != null
+          ? (data['ProductVariations'] as List)
               .map((e) => ProductVariationModel.fromJson(e))
               .toList()
           : [],

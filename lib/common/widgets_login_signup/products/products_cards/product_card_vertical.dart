@@ -8,7 +8,7 @@ import 'package:t_store/common/widgets_login_signup/images/t_rounded_image.dart'
 import 'package:t_store/common/widgets_login_signup/texts/product_price_text.dart';
 import 'package:t_store/common/widgets_login_signup/texts/product_title_text.dart';
 import 'package:t_store/common/widgets_login_signup/texts/t_brand_title_text_with_verified_icon.dart';
-import 'package:t_store/features/shop/controllers/product_controller.dart';
+import 'package:t_store/features/shop/controllers/products/product_controller.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
 import 'package:t_store/features/shop/screens/product_details/widgets/product_detail.dart';
 import 'package:t_store/utils/constants/colors.dart';
@@ -44,9 +44,7 @@ class TProductCardVertical extends StatelessWidget {
               height: 180,
               width: 180,
               padding: const EdgeInsets.all(TSizes.sm),
-              backgroundColor: dark
-                  ? TColors.dark
-                  : const Color.fromARGB(255, 239, 239, 239),
+              backgroundColor: dark ? TColors.dark : TColors.light,
               child: Stack(
                 children: [
                   //Thumnail Image
