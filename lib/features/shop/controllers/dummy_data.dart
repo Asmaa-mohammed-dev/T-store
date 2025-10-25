@@ -1,4 +1,3 @@
-import 'package:t_store/data/user/user_model.dart';
 import 'package:t_store/features/shop/models/banner_model.dart';
 import 'package:t_store/features/shop/models/brand_model.dart';
 import 'package:t_store/features/shop/models/category_model.dart';
@@ -6,7 +5,6 @@ import 'package:t_store/features/shop/models/product_attribute_model.dart';
 import 'package:t_store/features/shop/models/product_model.dart';
 import 'package:t_store/features/shop/models/product_variation_model.dart';
 import 'package:t_store/routes/routes.dart';
-import 'package:t_store/utils/constants/enums.colors.dart';
 import 'package:t_store/utils/constants/image_strings.dart';
 
 class TDummyData {
@@ -230,7 +228,7 @@ class TDummyData {
       description: 'Kids Jilbab. Iron Gray',
       brand: BrandModel(
         id: '1',
-        image: 'https://picsum.photos/200',
+        image: 'assets/icons/categories/1.png',
         name: 'jilbab',
         productsCount: 265,
         isFeatured: true,
@@ -240,7 +238,7 @@ class TDummyData {
       sku: 'ABR4568',
       categoryId: '1',
       productAttributes: [
-        ProductAttributeModel(name: 'Color', values: ['Red', 'Black', 'Red']),
+        ProductAttributeModel(name: 'Color', values: ['red', 'green', 'black']),
         ProductAttributeModel(
           name: 'Size',
           values: ['Large', 'Medium', 'Small'],
@@ -253,21 +251,64 @@ class TDummyData {
           price: 134,
           salePrice: 122.6,
           image: 'https://picsum.photos/200',
-          description: 'هذا وصف عن منتج جوزديل سيتك أنجوس تندريليون 250 جم',
-          attributeValues: {'Color': 'Red', 'Size': 'Small'},
+          description:
+              "Kids' Jilbab in Iron Gray – a modest and comfortable outfit designed for children",
+          attributeValues: {'Color': 'red', 'Size': 'Small'},
         ),
         ProductVariationModel(
           id: '2',
-          stock: 0,
+          stock: 1,
           price: 134,
           salePrice: 122.6,
           image: 'https://picsum.photos/200',
-          description: 'هذا وصف عن منتج جوزديل سيتك أنجوس تندريليون 250 جم',
-          attributeValues: {'Color': 'Red', 'Size': 'Medium'},
+          description:
+              "Kids' Jilbab in Iron Gray – a modest and comfortable outfit designed for children",
+          attributeValues: {'Color': 'black', 'Size': 'Medium'},
         ),
       ],
       productType: 'ProductType.variable',
       // productType: ProductType.variable.toString(),
     ),
-  ];
+  // 👇 المنتج الثاني
+  ProductModel(
+    id: '002',
+    title: 'Kids Abaya. Navy Blue',
+    stock: 20,
+    price: 150,
+    isFeatured: true,
+    thumbnail: 'https://picsum.photos/201',
+    description: 'Elegant Kids Abaya in Navy Blue',
+    brand: BrandModel(
+      id: '2',
+      image: 'assets/icons/categories/23.png',
+      name: 'abaya',
+      productsCount: 180,
+      isFeatured: false,
+    ),
+    images: ['https://picsum.photos/201', 'https://picsum.photos/202'],
+    salePrice: 120,
+    sku: 'XYZ789',
+    categoryId: '2',
+    productAttributes: [
+      ProductAttributeModel(name: 'Color', values: ['blue', 'red']),
+      ProductAttributeModel(name: 'Size', values: ['Small', 'Medium']),
+    ],
+    productVariations: [
+      ProductVariationModel(
+        id: '1',
+        stock: 10,
+        price: 150,
+        salePrice: 120,
+        image: 'https://picsum.photos/201',
+        description: "Elegant Kids Abaya in Navy Blue – perfect for special occasions",
+        attributeValues: {'Color': 'blue', 'Size': 'Medium'},
+      ),
+    ],
+    productType: 'ProductType.variable',
+  ),
+];  
+    
+    
+
+  
 }
