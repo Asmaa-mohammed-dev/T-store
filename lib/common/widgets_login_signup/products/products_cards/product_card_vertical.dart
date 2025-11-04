@@ -56,6 +56,7 @@ class TProductCardVertical extends StatelessWidget {
                     ),
                   ),
                   //sale Tag
+                  if(salePercentage != null)
                   Positioned(
                     top: 12,
                     child: TRoundedContainer(

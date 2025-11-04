@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:t_store/common/styles/rounded_container.dart';
 import 'package:t_store/common/widgets_login_signup/images/t_circular_inage.dart';
 import 'package:t_store/common/widgets_login_signup/texts/t_brand_title_text_with_verified_icon.dart';
+import 'package:t_store/features/shop/models/brand_model.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/enums.colors.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
 
@@ -12,10 +12,10 @@ class TBrandCard extends StatelessWidget {
   const TBrandCard({
     super.key,
     required this.showBorder,
-    this.onTap,
+    this.onTap,required this.brand,
   });
 
-// final BrandModel brand;
+final BrandModel brand;
   final bool showBorder;
   final void Function()? onTap;
 
@@ -35,7 +35,8 @@ class TBrandCard extends StatelessWidget {
             //Icons
             Flexible(
               child: TCircularImage(
-                image: TImages.clothIcon,
+                image: brand.image,
+                isNetworkImage: true,
                 backgroundColor: Colors.transparent,
                 overlayColor: isDark ? TColors.white : TColors.black,
               ),
@@ -48,10 +49,10 @@ class TBrandCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TBrandTitleWithVertification(
-                    title: 'Stabraq',
+                    title: brand.name,
                     brandTextSize: TextSizes.large,
                   ),
-                  Text('256 products',
+                  Text('${brand.productsCount ?? 0}products',
                       overflow: TextOverflow.ellipsis,
                       style: Theme.of(context).textTheme.labelMedium?.copyWith(
                           color: isDark
