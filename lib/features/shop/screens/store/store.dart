@@ -12,7 +12,7 @@ import 'package:t_store/features/shop/controllers/category_controller.dart';
 import 'package:t_store/features/shop/controllers/products/brand_controller.dart';
 import 'package:t_store/features/shop/screens/brands/all_brands.dart';
 import 'package:t_store/features/shop/screens/brands/brand_products.dart';
-import 'package:t_store/features/shop/screens/home/widgets/categorytab.dart';
+import 'package:t_store/features/shop/screens/home/widgets/category_tab.dart';
 import 'package:t_store/utils/constants/colors.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/helper_functions.dart';
