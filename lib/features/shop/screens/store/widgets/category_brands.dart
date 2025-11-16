@@ -4,7 +4,6 @@ import 'package:t_store/common/shimmer/list_tile_shimmer.dart';
 import 'package:t_store/common/widgets_login_signup/brands/brand_show_case.dart';
 import 'package:t_store/features/shop/controllers/products/brand_controller.dart';
 import 'package:t_store/features/shop/models/category_model.dart';
-import 'package:t_store/utils/constants/image_strings.dart';
 import 'package:t_store/utils/constants/sizes.dart';
 import 'package:t_store/utils/helpers/cloud_helper_function.dart';
 

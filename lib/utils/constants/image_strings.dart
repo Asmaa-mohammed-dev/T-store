@@ -65,4 +65,6 @@ class TImages {
   static const String successfullyRegisterAnimation =
       'assets/images/animation/register.json';
   static const String docerAnimation = 'assets/images/animation/docer.json';
+    static const String writingpen = 'assets/images/animation/writingpen.json';
+
 }

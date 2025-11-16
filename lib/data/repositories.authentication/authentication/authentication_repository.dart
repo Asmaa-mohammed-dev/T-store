@@ -11,6 +11,7 @@ import 'package:t_store/features/authentication/screens/login/login.dart';
 import 'package:t_store/features/authentication/screens/onboarding/onboarding.dart';
 import 'package:t_store/features/authentication/screens/signup/verify_email.dart';
 import 'package:t_store/navigation_menu.dart';
+import 'package:t_store/utils/local_storage/storage_utilit.dart';
 
 class AuthenticationRepository extends GetxController {
   static AuthenticationRepository get instance => Get.find();
@@ -26,10 +27,14 @@ class AuthenticationRepository extends GetxController {
   }
 
   // 🔵Function to show Relevant Screen
-  screenRedirect() async {
+  void screenRedirect() async {
     final user = _auth.currentUser;
     if (user != null) {
       if (user.emailVerified) {
+
+//Initialize User specific Storage
+await TLocalStorage.init(user.uid);
+
         Get.offAll(() => const NavigationMenu());
       } else {
         Get.offAll(() => VerifyEmailScreen(email: _auth.currentUser?.email));

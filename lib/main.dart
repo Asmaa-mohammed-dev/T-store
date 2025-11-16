@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:t_store/app.dart';
 import 'package:t_store/data/repositories.authentication/authentication/authentication_repository.dart';
+import 'package:t_store/features/shop/controllers/products/favourites_controller.dart';
 import 'package:t_store/features/shop/models/firestore_uploader.dart';
 import 'package:t_store/firebase_options.dart';
 import 'package:t_store/navigation_menu.dart';
@@ -16,6 +17,9 @@ Future<void> main() async {
 
   // Getx local storage
   await GetStorage.init();
+   // تجربة قراءة البيانات من GetStorage
+  final storedFavorites = await GetStorage().read('favorites');
+  print("Favorites from storage: $storedFavorites");
   // Await Splash until other items load
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
@@ -30,6 +34,7 @@ Future<void> main() async {
 
   WidgetsFlutterBinding.ensureInitialized();
 
+Get.put(FavouritesController());
   // ✅ تسجيل NavigationController هنا لتجنب إعادة إنشائه عدة مرات
   Get.put(NavigationController());
   runApp(const App());

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:t_store/features/authentication/wishlist/wishlist.dart';
+import 'package:t_store/features/authentication/screens/wishlist/wishlist.dart';
 import 'package:t_store/features/personalization/screens/settings/settings.dart';
 import 'package:t_store/features/shop/screens/store/store.dart';
 import 'package:t_store/features/shop/screens/home/widgets/home.dart';
