@@ -133,46 +133,69 @@ class TDummyData {
       name: 'خضار',
       isFeatured: true,
     ),
-    CategoryModel(
-      id: '5',
-      image: TImages.sportIcon,
-      name: 'فاكهة',
-      isFeatured: true,
-    ),
-    CategoryModel(
-      id: '6',
-      image: TImages.sportIcon,
-      name: 'فاكهة',
-      isFeatured: true,
-    ),
-    CategoryModel(
-      id: '7',
-      image: TImages.sportIcon,
-      name: 'فاكهة',
-      isFeatured: true,
-    ),
+    // CategoryModel(
+    //   id: '5',
+    //   image: TImages.sportIcon,
+    //   name: 'فاكهة',
+    //   isFeatured: true,
+    // ),
+    // CategoryModel(
+    //   id: '6',
+    //   image: TImages.sportIcon,
+    //   name: 'فاكهة',
+    //   isFeatured: true,
+    // ),
+    // CategoryModel(
+    //   id: '7',
+    //   image: TImages.sportIcon,
+    //   name: 'فاكهة',
+    //   isFeatured: true,
+    // ),
     //subcategories
-    CategoryModel(
-      id: '5',
-      image: TImages.sportIcon,
-      name: 'فاكهة',
-      parentId: '1',
-      isFeatured: false,
-    ),
-    CategoryModel(
-      id: '6',
-      image: TImages.sportIcon,
-      name: 'فاكهة',
-      parentId: '1',
-      isFeatured: false,
-    ),
-    CategoryModel(
-      id: '7',
-      image: TImages.sportIcon,
-      name: 'فاكهة',
-      parentId: '1',
-      isFeatured: false,
-    ),
+    // subcategories
+CategoryModel(
+  id: '10',
+  image: TImages.sportIcon,
+  name: 'فاكهة صغيرة',
+  parentId: '1', // لحوم
+  isFeatured: false,
+),
+CategoryModel(
+  id: '11',
+  image: TImages.sportIcon,
+  name: 'فاكهة صغيرة',
+  parentId: '2', // دجاج
+  isFeatured: false,
+),
+CategoryModel(
+  id: '12',
+  image: TImages.sportIcon,
+  name: 'فاكهة صغيرة',
+  parentId: '3', // أسماك
+  isFeatured: false,
+),
+
+    // CategoryModel(
+    //   id: '5',
+    //   image: TImages.sportIcon,
+    //   name: 'فاكهة',
+    //   parentId: '10',
+    //   isFeatured: false,
+    // ),
+    // CategoryModel(
+    //   id: '6',
+    //   image: TImages.sportIcon,
+    //   name: 'فاكهة',
+    //   parentId: '11',
+    //   isFeatured: false,
+    // ),
+    // CategoryModel(
+    //   id: '7',
+    //   image: TImages.sportIcon,
+    //   name: 'فاكهة',
+    //   parentId: '12',
+    //   isFeatured: false,
+    // ),
   ];
 
   //List of all brands
@@ -236,7 +259,7 @@ class TDummyData {
       images: ['https://picsum.photos/200', 'https://picsum.photos/200'],
       salePrice: 30,
       sku: 'ABR4568',
-      categoryId: '1',
+      categoryId: '10',
       productAttributes: [
         ProductAttributeModel(name: 'Color', values: ['red', 'green', 'black']),
         ProductAttributeModel(

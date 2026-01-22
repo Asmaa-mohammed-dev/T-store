@@ -21,7 +21,9 @@ class CategoryController extends GetxController {
 
   //Load category data
   Future<void> fetchCategories() async {
+    
     try {
+     
       //Show loader while loading categories
       print("Fetching categories...");
       isLoading.value = true;
@@ -52,11 +54,27 @@ class CategoryController extends GetxController {
     }
   }
   //load selected category data
+  Future<List<CategoryModel>> getSubCategories(String categoryId)async{
+    try{
+          print('REQUESTED PARENT ID => $categoryId');
+final subCategories = await _categoryRepository.getSubCategories(categoryId);
+return subCategories;
+    }catch(e){
+      TLoaders.errorSnackBar(title: 'Oh Snap',message: e.toString());
+      return [];
+    }
+  }
 
   //Get Category or sub-category Products
   Future<List<ProductModel>> getCategoryProducts({required String categoryId, int limit = 4})async{
-   // Fetch Limited (4) products against each subCategory;
+   try{
+  // Fetch Limited (4) products against each subCategory;
    final products = await ProductRepository.instance.getProductsForCategory(categoryId: categoryId, limit: limit);
    return products; 
+   } catch(e){
+    TLoaders.errorSnackBar(title: 'Oh snap!', message: e.toString());
+    return [];
+   }
+ 
   }
 }

@@ -35,7 +35,8 @@ class TVerticalcallmageText extends StatelessWidget {
               fit: BoxFit.fitWidth,
               height: 56,
               padding: TSizes.sm * 1.4,
-              isNetworkImage: isNetworkImage,
+              // isNetworkImage: isNetworkImage,
+                isNetworkImage: image.startsWith('http'),
               backgroundColor: backgroundColor,
               overlayColor: THelperFunctions.isDarkMode(context)
                   ? TColors.light

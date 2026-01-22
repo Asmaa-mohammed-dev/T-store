@@ -45,19 +45,41 @@ class TRoundedImage extends StatelessWidget {
               : BorderRadius.zero,
           border: border,
         ),
-        child: isNetworkImage
-            ? CachedNetworkImage(
-                imageUrl: imageUrl,
-                fit: fit,
-                progressIndicatorBuilder: (context, url, downloadProgress) =>
-                    TShimmerEffect(
-                        width: width ?? double.infinity, height: height ?? 158),
-                errorWidget: (context, url, error) => const Icon(Icons.error),
-              )
-            : Image(
-                fit: fit,
-                image: AssetImage(imageUrl),
+        // child: isNetworkImage
+        //     ? CachedNetworkImage(
+        //         imageUrl: imageUrl,
+        //         fit: fit,
+        //         progressIndicatorBuilder: (context, url, downloadProgress) =>
+        //             TShimmerEffect(
+        //                 width: width ?? double.infinity, height: height ?? 158),
+        //         errorWidget: (context, url, error) => const Icon(Icons.error),
+        //       )
+        //     : Image(
+        //         fit: fit,
+        //         image: AssetImage(imageUrl),
+        //       ),
+        child: ClipRRect(
+  borderRadius: applyImageRadius
+      ? BorderRadius.circular(borderRadius)
+      : BorderRadius.zero,
+  child: isNetworkImage
+      ? CachedNetworkImage(
+          imageUrl: imageUrl,
+          fit: fit ?? BoxFit.cover,
+          progressIndicatorBuilder: (context, url, downloadProgress) =>
+              TShimmerEffect(
+                width: width ?? double.infinity,
+                height: height ?? 158,
               ),
+          errorWidget: (context, url, error) =>
+              const Icon(Icons.error),
+        )
+      : Image.asset(
+          imageUrl,
+          fit: fit ?? BoxFit.cover,
+        ),
+),
+
       ),
     );
   }

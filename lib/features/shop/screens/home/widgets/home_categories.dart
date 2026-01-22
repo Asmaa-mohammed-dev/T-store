@@ -32,10 +32,12 @@ class THomeCategories extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           itemBuilder: (_, index) {
             final category = categoryController.featuredCategories[index];
+              print('IMAGE URL => ${category.image}');
+
             return TVerticalcallmageText(
               image: category.image,
               title: category.name,
-              onTap: () => Get.to(() => const SubCategories()),
+              onTap: () => Get.to(() =>  SubCategories(category: category,)),
             );
           },
         ),
